@@ -1,0 +1,7 @@
+/* @theme custom */
+
+@import 'default';
+
+section {
+  background: rgb(255, 153, 167);
+}
