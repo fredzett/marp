@@ -1,10 +1,9 @@
 /* @theme custom */
 
 @import 'gaia';
-
 /* Style Action title */
 h1 {
-    font-size: 14px;
+  font-size: 14px;
     color: #a4afb7;
     margin-bottom: 5px;
 }
@@ -165,3 +164,41 @@ img[alt~="center"] {
   display: block;
   margin: 0 auto;
 }
+
+
+table tr td:empty {
+  width: 50px;
+}
+  
+table tbody td {
+  padding: 10px
+}
+
+table thead th  {
+  padding: 10px;
+  background: #557A95;
+  color: white;
+  border: none
+}
+
+table thead td {
+  border: none;
+}
+ 
+
+
+table tbody td {
+  border: none;
+  /*color: green;*/
+}
+
+section.mytable table tbody td {
+  color: green;
+
+}
+section.mytable table  {
+  width:100%;
+  table-layout: fixed
+
+}
+

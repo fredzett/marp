@@ -11,11 +11,12 @@ footer: (c) by me
 <!-- _paginate: false -->
 # Using Marpit 
 ## ~~A tutorial~~ | Prof. Dr. Felix Zeidler
-
+****
 --- 
 ## Agenda
 
 ### Die folgenden Dinge werden in dieser Präsentation enthalten sein
+
 1️⃣ Art der Hervorhebung von Text
 
 2️⃣ Kapitelslides
@@ -35,7 +36,7 @@ Auf geht's 😆
 <!-- _class: chapter -->
 <!-- _footer: '' -->
 <!-- _paginate: false -->
-# 1️⃣ Hervorhebung von Text 
+# ~~1~~ Hervorhebung von Text 
 
 ---
 # 1️⃣ Text 
@@ -156,10 +157,199 @@ Gut klappt allerings auch das hinzufügen von Quelle<sup>*</sup>
 ###### * die Information habe ich [hier](https://www.spiegel.de) gefunden
 
 ---
-
 <!-- _class: lead -->
-<!-- _backgroundColor: pink -->
-<!-- _footer: "" -->
+<!-- _backgroundColor: #5D5C61 -->
+<!-- _color: white -->
+<!-- _footer: '' -->
 <!-- _paginate: false -->
+##### Vielen Dank für die Aufmerksamkeit <!-- fit -->
 
-##### Thanks for listening <!-- fit -->
+---
+
+### Kontaktdaten
+<br></br>
+
+
+📧  $\qquad$ felix.zeidler@gmail.com
+☎️  $\qquad$ ...
+❗ Dies ist ein Test!
+
+🧠 Test
+
+> **Exercise** :brain:
+>
+> We have **two** ~~different~~ customers. One of the customers wants to buy something. 
+> <br></br>
+> **❓ Question**
+> What is the probability $P(X=3), \ \text{where} \ \forall x \in \mathbb{R}^+$
+
+
+---
+# Appendix 
+## Pseudocode
+
+> **Algorithm 1: Example-Algo** 
+> Algorithm parameters: step size  $\alpha \in (0 , 1] , \epsilon > 0$   
+Initialize  $Q  ( s, a ), \ \forall s \in S^+ , a \in A ( s ),$ arbitrarily except that $Q ( terminal , \cdot ) = 0$    
+>
+> $a \leftarrow 12$
+> Loop for each episode:  
+$\quad$Initialize $S$   
+$\quad$Loop  for  each  step  of  episode:    
+$\qquad$Choose  $A$ from $S$ using some policy derived from $Q$ (eg $\epsilon$-greedy)   
+$\qquad$Take action $A$, observe $R, S'$   
+$\qquad Q(S,A) \leftarrow Q(S,A) + \alpha[R+\gamma \max_a(S', a) - Q(S, A)]$   
+$\qquad S \leftarrow S'$    
+$\quad$ until $S$ is terminal
+
+
+---
+# Appendix B 
+## Pseudocode im Codeblock?
+
+```python
+# Ein Kommentar: es folgt eine Funktion
+
+def name_of_function(values: List[int]) -> Int:
+    return np.sum(values)
+```
+
+---
+<!-- _footer: '' -->
+
+![bg fit right](./assets/distribution.png)
+
+<br></br>
+#### Erläuterungen
+Abbildung zeigt Dichte einer Normalverteilung $\mathnormal{N(\mu, \sigma)}$. Diese zeichnet sich aus durch:
+
+1. ....
+
+2. dddd
+
+
+---
+# Chekc 
+## Pseudocode for birthday problem
+
+> **Algorithm:** Birthday Problem
+>
+> $\quad$ $initialize$ nsims
+> $\quad$ sameday $\leftarrow$ 0
+> $\quad$ npeople $\leftarrow$ 25
+>
+> $\quad$ **for** $1 \ldots$ nsims
+> $\qquad$ allbirthdays $\leftarrow$ birthdays of npeople
+> $\qquad$ uniquebirthdays $\leftarrow$ determine number of different birthdays
+> $\qquad$ **if** *uniquebirthdays* **<** npeople
+> $\qquad \quad$ sameday $\leftarrow$ +1
+> 
+> $\quad$ prob $\leftarrow$ sameday / nsims
+
+<br></br>
+
+<div align='center'>
+What is your guess?
+</div>
+
+---
+
+
+# Checks 
+## Python code for birthday problem
+
+Here is the code in **Python**
+
+```python
+import numpy as np 
+
+nsims = 10000
+sameday = 0
+npeople = 25
+for sim in range(nsims):
+    birthdays = np.random.choice(range(365), n=npeople)
+    unique_birthdays = np.unique(birthdays) # you can also use set(birthdays)
+    if len(unique_birthdays) < npeople:
+        sameday += 1
+prob = sameday / nsims
+```
+
+**!** 
+
+The above example is just *one* way how to translate the problem into code. There are numerous ways how to achieve this in Python. 
+
+--- 
+# Code 
+## What we should have learned
+
+Some new things, we introduced in **Python**:
+
+- we can use `np.random.choice()` to sample from an array of elements (note that these could also be non-numerical)
+
+- we can use `np.unique()` if we want to determine the number of unique elements (alternatively we could have used `set()`)
+
+---
+<!-- _class: mytable -->
+
+
+# Chapter 01
+## Eine Tabelle, die nicht gut formatiert ist!  
+
+**Was wird das noch geben?**
+
+
+| Header 1       	| Header 2       	| Header 3|
+|:----------------	|:----------------	| :------------|
+| True negative  	| False negative $f(x) = 3x \times 12 = 36x$	|
+| False negative 	| True positive  	|
+| False negative 	| True positive  	|
+| False negative 	| True positive  	|
+| False negative 	| True positive  	|Teste etwas !|
+| False negative 	| True positive  	|
+
+
+Die ist ein Test
+
+| Heade  r 1 | Header 2 | Header 3|   
+|------|------|-----|   
+|A  |------|-----|   
+
+
+---
+# A 
+## B
+
+<style>
+pre ol {
+  all: unset;
+  display: block;
+  counter-reset: line-number 0;
+}
+pre ol li {
+  all: unset;
+  display: list-item;
+  list-style: none;
+}
+pre ol li::before {
+  content: counter(line-number) ": ";
+  counter-increment: line-number;
+}
+</style>
+
+```python
+import numpy as np 
+
+nsims = 10000
+sameday = 0
+npeople = 25
+for sim in range(nsims):
+    birthdays = np.random.choice(range(365), n=npeople)
+    unique_birthdays = np.unique(birthdays) # you can also use set(birthdays)
+    if len(unique_birthdays) < npeople:
+        sameday += 1
+prob = sameday / nsims
+```
+
+<div align='center'>
+Some centered text!
+</div>
