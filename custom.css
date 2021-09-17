@@ -37,9 +37,8 @@ h6 {
 }
 
 a {
-  color: #5D5C61;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 /* Style slide master */

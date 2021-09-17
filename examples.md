@@ -353,3 +353,6 @@ prob = sameday / nsims
 <div align='center'>
 Some centered text!
 </div>
+
+
+npx @marp-team/marp-cli@latest --engine /Users/felix/Coding/marp/engine.js --theme https://raw.githubusercontent.com/fredzett/marp/master/custom.css --html examples.md -o output.pdf
