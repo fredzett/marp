@@ -158,6 +158,21 @@ section.chapter h1 {
   margin-top: 320px;
   border-bottom: 2px solid white;
 }
+/* Sub-chapter slide class */
+
+section.subchapter
+ {
+  background-color: #c6ccd1;
+  width: max;
+}
+
+section.subchapter h1 {
+  font-size: 35px;
+  color: #557A95;
+  margin-top: 320px;
+  border-bottom: 2px solid white;
+}
+
 
 
 img[alt~="center"] {
