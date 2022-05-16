@@ -416,12 +416,13 @@ fa
 df
 
 ---
-# a 
-## b
+<!-- _class: chapter -->
+<!-- _footer: '' -->
+<!-- _paginate: false -->
+# Dies ist ein Test
 
-<!-- _class: twocols -->
-
-
-Dies dist aölkdjföajdfö kaljdf öakjdf ökalsjdf ökalsjd föaklsdjf aklösdjf aklösdjf aölskdjf alöksdjf aöklsdjf aöklsdjf aökldfj 
-
-![alt](./assets/distribution.png)
+---
+<!-- _class: subchapter -->
+<!-- _footer: '' -->
+<!-- _paginate: false -->
+## Hallo 
